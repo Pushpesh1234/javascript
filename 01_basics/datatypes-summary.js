@@ -24,15 +24,38 @@
 // console.log(typeof(bigNumber)) 
 
 // Arrays => value type is object
-const heroes=["Superman","Batman","Ironman"]
+// const heroes=["Superman","Batman","Ironman"]
 
 // Object => value type is object
-let myObj={
-    name:"Pushpesh",
-    age:23
+// let myObj={
+//     name:"Pushpesh",
+//     age:23
  
-}
+// }
 // Function=> type is Function orfunction object
-const myFunction= function(){
-    console.log("Hello World")
-}
+// const myFunction= function(){
+//     console.log("Hello World")
+// }
+
+
+// *********************************Memory Heap& Stack**************************************
+
+// Stack(Primitive) & Heap(Non-Primitive)
+// let myName="Pushpesh"
+// let myhomeName=myName
+// console.log(myhomeName)
+// console.log(myName)
+// myhomeName="Pappu"
+
+// let user_1={
+//     email:"Pgoogle.com",
+//     upi:"user@ybl",
+// }
+
+// let user_2= user_1
+
+// user_2.email="pr@google.com"
+
+// console.log(user_1.email);
+// console.log(user_2.email);
+    
