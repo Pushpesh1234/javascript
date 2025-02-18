@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Edit Remove and creating new wlemnt using function</title>
+</head>
+<body>
+    <ul class="language"><li>Javascript</li></ul>
+</body>
+<script> 
+
+// function newElement(lang){
+//     const li= document.createElement('li')
+//     //  li.innerHTML=`${lang}`
+//     li.appendChild(li).createTextNode(`${lang}`)
+//   document.querySelector('.language').appendChild(li) 
+// }
+
+const create= function (lang) {
+ const li= document.createElement('li')
+ const addText=document.createTextNode(lang)
+ li.appendChild(addText)
+ document.querySelector('.language').appendChild(li)
+}
+// newElement("Python")
+create("golang")
+
+const li=document.createElement('li')
+li.innerHTML="java"
+document.querySelector('.language').appendChild(li)
+//Edit
+ const editElement= document.querySelector('li:nth-child(3)')
+ editElement.innerText="PHP"
+ const editNew=document.createElement('li')
+editNew.textContent="Ruste"
+editElement.replaceWith(editNew)
+
+const firstLang=document.querySelector('li')
+firstLang.outerHTML='<li>Rube on Rails</li>'
+
+//remove
+const removeEle=document.querySelector('li:last-child')
+removeEle.remove()
+</script>
+</html>
