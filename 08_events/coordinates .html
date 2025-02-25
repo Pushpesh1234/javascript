@@ -1,0 +1,49 @@
+
+
+
+
+
+    /* The clientX and clientY properties of the event object in JavaScript are part of
+     the DOM event system and are particularly useful for mouse and pointer
+     events(e.g., 'click', 'mousemove', 'mousedown').
+     They provide the coordinates of where an event occurred relative to the viewport 
+     of the browser window.Let’s break them down in detail.*/
+
+/*What Are clientX and clientY?
+clientX: The horizontal (X-axis) coordinate of the event, measured 
+in pixels, relative to the left edge of the viewport.
+clientY: The vertical (Y-axis) coordinate of the event, 
+measured in pixels, relative to the top edge of the viewport.
+Key Points 
+Units: Pixels.
+Reference: The viewport (the visible area of the browser window), 
+not the entire document or screen.
+Event Types: Available in MouseEvent and PointerEvent 
+objects (e.g., for clicks, hovers, drags).*/
+
+// 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ClientX/Y Demo</title>
+    <style>
+        body { height: 2000px; width: 2000px; background: #f0f0f0; }
+        #output { position: fixed; top: 10px; left: 10px; }
+    </style>
+</head>
+<body>
+    <div id="output">Click anywhere!</div>
+    </body>
+    <script>
+    
+        document.addEventListener('click', function(e) {
+            document.getElementById('output').textContent = 
+                `Clicked at: X=${e.clientX}, Y=${e.clientY}`;
+        });
+    
+
+
+</script>
+
+</html>
