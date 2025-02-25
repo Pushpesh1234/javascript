@@ -20,24 +20,29 @@
 </body>
 <script>
 
-    //type , timeStamp, target,preventdDefault,cutrrentTarget,clientX,clienY,altKey,ctrl Key,keyCode
-    //toElement , srcElement,shiftKey
+
+
+    
+
 //     console.log("hello")
 //  const owl=document.getElementById('owl');
 //  console.log(owl)
 //  owl.onClick = function(){
 //        alert("owl clicked")
 //      }
-//attachEvent()
+
+     //attachEvent()
      //jQuery-> onEventListiner()
 
      //document.getElementById('owl').addEventListener('click',function(e){
       //  console.log(e)
 // },false)
+
+
 //      const photo=document.getElementById('photoshop')
 //     const japan= document.getElementById('japan')
 //     const river= document.getElementById('river')
-  const owl= document.getElementById('owl')
+  //const owl= document.getElementById('owl')
 //     const prayer= document.getElementById('prayer')
 //     //  const document.getElementById('photoshop')
 //     photo.addEventListener('click',function(e){
@@ -59,7 +64,8 @@
 // prayer.addEventListener('click',function(e){
 //     prayer.remove()
 // })
-const ul=document.getElementById('images')
+
+
 
 
 // ul.addEventListener('click',function(e){
@@ -70,20 +76,46 @@ const ul=document.getElementById('images')
 //     console.log("owl id running")
 // },false)
 
+    //  type , timeStamp, target,preventdDefault
+    //cutrrentTarget, clientX,clientY,altKey,ctrl Key,keyCode
+    //toElement , srcElement,shiftKey
+    const ul=document.getElementById('images')
+    const owl=document.getElementById("owl")
+document.addEventListener('click',function(e){  
+// console.log("ul event running")
+// console.log(e)
+// console.log(e.timeStamp)
+// console.log(e.currentTarget)
+// console.log(e.target)
+// console.log(`(X,Y):(${e.clientX},${e.clientY})` )
+// console.log(`(S-(X,Y):(${e.screenX},${e.screenY})`)
+// console.log(`(P-(X,Y):(${e.pageX},${e.pageY})`)
+// console.log(`(O-(X,Y):(${e.offsetX},${e.offsetY})`)
+// console.log(`${e.toElement}`)
+// console.log(e.relatedTarget)
+// owl.addEventListener('click',function(e){
+    // console.log(e.srcElement) //depricated same functionality as target
+    // console.log(e.keyCode)
+    // console.log(e.ctrlKey)
+//})
 
-ul.addEventListener('click',function(e){
-    
-console.log("ul event running")
-},false)                                            //
-
-owl.addEventListener('click',function(e){
-    e.stopPropagation()
-    console.log("owl id running")
-},false)
-
-document.getElementById('google').addEventListener('click',function(e){
-   e.preventDefault()
+document.addEventListener('keydown', function(e){
+    // console.log(`(Key,Code)=> (${e.key},${e.code})`)
+    console.log(` Shift:${e.shiftKey},Alt:${e.altKey},Ctrl:${e.ctrlKey},,metakey:${e.metaKey}`)
 })
+},false)                                            
+
+
+ 
+
+// owl.addEventListener('click',function(e){
+//     e.stopPropagation()
+//     console.log("owl id running")
+// },false)
+
+// document.getElementById('google').addEventListener('click',function(e){
+//    e.preventDefault()
+// })
 // ul.addEventListener('click',function(e){
 // console.log("ul event running")
 // },true)                                             //capturing
