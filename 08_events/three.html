@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>New Javascript is Here</h1>
+    <button id="stabtn">Start</button>
+    <button id="stobtn">Stop</button>
+</body>
+<script>
+    const now=function(str){
+    console.log(str,"Pushpesh",Date.now())
+}
+document.querySelector('#stabtn').addEventListener('click',function(){
+    const stopInt=setInterval(now,2000,"hi")
+    document.querySelector('#stobtn').addEventListener('click',function(){
+clearInterval(stopInt)
+})
+})
+// const stopInt=setInterval(now,2000,"hi")
+// document.querySelector('#stobtn').addEventListener('click',function(){
+// clearInterval(stopInt)
+// })
+</script>
+</html>
