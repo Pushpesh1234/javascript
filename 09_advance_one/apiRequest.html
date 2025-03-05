@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #card{
+            display:grid;
+            /* grid-template-rows:  ; */
+             justify-content: center;
+
+        }
+        #btn{
+            width:50px;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="card" >
+        <div id="avatar">avatar</div>
+        <div id="follower">follower</div>
+        <button id="btn">click</button>
+    </div>
+    <button>click</button>
+    
+    </body>
+   <script>
+    document.querySelector('#btn').addEventListener('click',function(){
+   const requestUrl='https://api.github.com/users/hiteshchoudhary'
+        const xhr=new XMLHttpRequest()
+        xhr.open('GET',requestUrl,false)
+        // console.log(xhr.readyState)
+        xhr.onreadystatechange=function(){
+             console.log(xhr.readyState)
+             
+            if(xhr.readyState===4){
+                const data=JSON.parse(this.responseText)
+                // console.log("hii")
+                // console.log(data)
+                document.querySelector('#avatar').innerHTML=`<img src=${data.avatar_url} width=200px height=200px>`
+                document.querySelector('#follower').innerHTML=`Followers:${data.followers}`
+            }
+        }
+        xhr.send()
+    })
+   </script> 
+
+</html>
