@@ -1,0 +1,49 @@
+.root{
+   /* display:grid;
+   place-items:center */
+}
+.form{
+display: flex;
+justify-content: center;
+background-color: red;
+height:150px;
+align-items:center;
+
+}
+#enter-task{
+   width:500px;
+   height: 50px;
+   border-radius: 30px;
+}
+#btn{
+   /* float:right; */
+   cursor:pointer;
+   width:70px;
+   height:50px;
+   border-radius: 20px;
+}
+#btn:hover{
+   background-color: red;
+}
+.task-bar{
+   /* background-color: blue; */
+
+}
+.task-item{
+   text-decoration: none;
+   list-style-type: none;
+   background-color: white;
+   cursor:pointer;
+   transition: ;
+}
+.task-item:hover{
+   background-color: grey;
+}
+
+span:hover{
+   background-color: red;
+}
+span{
+   cursor:pointer;
+   float:right
+}
