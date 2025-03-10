@@ -1,46 +1,80 @@
-const ul=document.querySelector('.task-bar')
-const buttonClicked=document.querySelector('#btn')
-const inputValue=document.querySelector('#enter-task')
+const ul = document.querySelector('.task-bar')
+const buttonClicked = document.querySelector('#btn')
+const inputValue = document.querySelector('#enter-task')
+let flexDiv;
 let listItem
-let spanCreated;
-// let nodeList=document.querySelectorAll('li')
-function createLiItem(){
-   
-   if(inputValue.value===''){
-    alert("add an input First")
+let divSymbol;
+let check;
+
+
+
+function checkInput() {
+   if (inputValue.value === '') {
+      alert("add an input First")
+      return null;
    }
-   else{
-     function createLi(){
-     listItem=document.createElement('li')
-     ul.appendChild(listItem)
-     listItem.classList.add('task-item')
-     listItem.appendChild(document.createTextNode(inputValue.value))
-      }
-     function insideLi(){
-      spanCreated =document.createElement('span')
-      listItem.appendChild(spanCreated)
-      spanCreated.innerHTML='&#10006'
-
-      spanCreated.addEventListener('click',function(e){
-      if(e.target){
-        listItem.style.display="none"}
-      })
-         
-
-  
-     }
-
-     return{
-        insideLi
-      }
+   else {
+      const contentLi = inputValue.value
+      inputValue.value = ''
+      return { createLi: () => createLi(contentLi) }
    }
 }
 
-buttonClicked.addEventListener('click',function(e){
-    e.preventDefault()
-   
- createLiItem().insideLi()
- inputValue.value=''
- console.log("hello")
+function createLi(content) {
+   flexDiv = document.createElement('div')
+   flexDiv.classList.add('flex-div')
+
+
+   listItem = document.createElement('li')
+   listItem.classList.add('task-item')
+   listItem.appendChild(document.createTextNode(content))
+
+
+   div = document.createElement('div')
+   div.classList.add('symbol')
+   div.innerHTML = '&#10006'
+
+   flexDiv.appendChild(listItem)
+   flexDiv.appendChild(div)
+   ul.appendChild(flexDiv);
+}
+
+
+// Add Button clicking Event
+
+buttonClicked.addEventListener('click', function (e) {
+   e.preventDefault()
+  const checkPoint= checkInput()
+   if(checkPoint){
+   checkPoint.createLi()
+   }
+
 })
+
+
+// removing function
+function removeli(ev) {
+   const isSymbolClicked=ev.target.closest('.symbol')
+   if (ev.target.closest('.symbol')) {
+      isSymbolClicked.parentNode.remove()
+      
+   }
+}
+
+// toggling Strike through
+function checkedMark(ev) {
+   const isSymbolClicked=ev.target.closest('.symbol')
+   const liAndflexDiv=ev.target.closest('.flex-div')
+   if (liAndflexDiv&&!isSymbolClicked) {
+    const li=  liAndflexDiv.querySelector('.task-item')
+    const symbol=liAndflexDiv.querySelector('.symbol')
+      li.classList.toggle('checked')
+      symbol.classList.toggle('changeColor') 
+            
+
+   }
+}
+
+ul.addEventListener('click', removeli)
+ul.addEventListener('click', checkedMark)
 
