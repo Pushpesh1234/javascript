@@ -1,49 +1,127 @@
-.root{
-   /* display:grid;
-   place-items:center */
+*{
+   box-sizing: border-box;
+}
+body{
+   margin: 0px;
+}
+
+h1{
+   text-align: center;
+   color:white;
+   /* font-size: 2.5rem; */
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .form{
 display: flex;
-justify-content: center;
+flex-direction:column;
+justify-content:baseline;
 background-color: red;
-height:150px;
+height:200px;
+gap:0px;
 align-items:center;
 
 }
+.input-div{
+   position:relative;
+   display:inline-block;
+}
+input::placeholder{
+   /* font-size:1rem; */
+  text-align:justify;
+  vertical-align: middle;
+  /* padding: 0 0 0 10px; */
+}
 #enter-task{
    width:500px;
-   height: 50px;
-   border-radius: 30px;
+   height: 80px;
+   border-radius: 30px; 
+   text-align: justify;
+   padding:10px 80px 10px 20px;
+   font-size: 1.5rem;
+   border:2px solid #ccc;
+   
 }
 #btn{
-   /* float:right; */
+   position: absolute;
+   right:5px;
+   top:50%;
+   transform:translateY(-50%);
    cursor:pointer;
-   width:70px;
-   height:50px;
+   width:55px;
+   height:40px;
+   background: #808080;
+   border:none;
    border-radius: 20px;
+   transition: 0.3s;
+   color:white;
+   font-weight: 700;
 }
 #btn:hover{
-   background-color: red;
+   background-color: #FF0000;
 }
 .task-bar{
-   /* background-color: blue; */
+padding:0px;
+margin:0px;
+/* background-color: aliceblue; */
 
+}
+.changeColor{
+   background-color: #808080;
+   
+}
+
+.flex-div{
+display:flex;
+gap:0px;
+align-items:center;
+background-color: #eee;
+
+
+
+}
+.flex-div:nth-child(odd){
+   background-color: #ccc;
+}
+
+.flex-div:hover{
+   background-color: gray;
 }
 .task-item{
    text-decoration: none;
    list-style-type: none;
-   background-color: white;
    cursor:pointer;
-   transition: ;
-}
-.task-item:hover{
-   background-color: grey;
+    font-size: 2rem;
+    padding: 0 0 0 10px;
+   height: 45px;
+   flex-grow:1;
+   
+   
 }
 
-span:hover{
+
+
+
+.symbol:hover{
    background-color: red;
 }
-span{
+.symbol{
    cursor:pointer;
-   float:right
+   display:flex;
+   align-items:center;
+   justify-content: center;
+   height:45px;
+   width:50px;
+   
 }
+.checked{
+   text-decoration: line-through;
+   background-color: #808080;
+   color:white;
+   border-bottom: 2px solid black;
+}
+.changeColor{
+   background: #808080;
+   color:#eee;
+   border-bottom:2px solid black
+}
+
