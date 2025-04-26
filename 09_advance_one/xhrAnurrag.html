@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        
+       
+     function request(method,url,callback){
+       
+       
+       const xhr=new XMLHttpRequest()
+        xhr.responseType='json'
+        // xhr.responseType='' (default value)
+        // xhr.responseType="document"
+
+        
+        xhr.onload=function(){
+           const result= xhr.response
+        //    console.log( xhr.responseText)
+        //    console.log(  typeof JSON.parse(result))
+          //  console.log(typeof result)
+          //  console.log(result)
+           
+           callback(result)
+        }
+        xhr.open(method,url)
+        xhr.send()
+    }
+   
+    request('GET','https://dummyjson.com/users',(usersData)=>{
+      // for(let i=0;i<30;i++){
+      console.log(usersData.users[0].id)
+      // console.log(data.users[i].id)
+
+      // console.log(usersData)
+      request('GET',`https://dummyjson.com/posts/user/${usersData.users[0].id}`,(postsData)=>{
+        // console.log(postsData)
+        console.log(postsData.posts[0].id)
+        request('GET',`https://dummyjson.com/comments/post/${postsData.posts[0].id}`,(commentsData)=>{
+          console.log(commentsData.comments[0].user.id) 
+          request('GET',`https://dummyjson.com/user/${commentsData.comments[0].user.id}`,(userData)=>{
+          console.log(userData) 
+        })
+      
+        })
+      })
+    // }
+    });
+  
+    
+    </script>
+</body>
+
+</html>
