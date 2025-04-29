@@ -19,39 +19,70 @@
         // xhr.responseType='' (default value)
         // xhr.responseType="document"
 
-        
-        xhr.onload=function(){
-           const result= xhr.response
+        const promise=new Promise((resolve,reject)=>{
+          xhr.onload=function(){
+            const result= xhr.response
+            resolve(result)
+          }
+
+          xhr.onerror=function(){
+          
+            reject("Something went wrong")
+          }
+        })
+
+
+        // xhr.onload=function(){
+        //    const result= xhr.response
         //    console.log( xhr.responseText)
         //    console.log(  typeof JSON.parse(result))
           //  console.log(typeof result)
           //  console.log(result)
            
-           callback(result)
-        }
+        //    callback(result)
+        // }
         xhr.open(method,url)
         xhr.send()
+        return promise
     }
-   
-    request('GET','https://dummyjson.com/users',(usersData)=>{
-      // for(let i=0;i<30;i++){
+  
+    request('GET','https://dummyjson.com/users').then((usersData)=>{
       console.log(usersData.users[0].id)
-      // console.log(data.users[i].id)
-
-      // console.log(usersData)
-      request('GET',`https://dummyjson.com/posts/user/${usersData.users[0].id}`,(postsData)=>{
-        // console.log(postsData)
-        console.log(postsData.posts[0].id)
-        request('GET',`https://dummyjson.com/comments/post/${postsData.posts[0].id}`,(commentsData)=>{
-          console.log(commentsData.comments[0].user.id) 
-          request('GET',`https://dummyjson.com/user/${commentsData.comments[0].user.id}`,(userData)=>{
-          console.log(userData) 
-        })
-      
-        })
+      return request('GET',`https://dummyjson.com/posts/user/${usersData.users[0].id}`)
+    }).then((postsData)=>{
+      console.log(postsData)
+      return request('GET',`https://dummyjson.com/comments/post/${postsData.posts[0].id}`)
+      }).then((commentsData)=>{
+        console.log(commentsData)
+        return request('GET',`https://dummyjson.com/user/${commentsData.comments[0].user.id}`)
+      }).then((lastData)=>{
+        console.log(lastData)
+      }).catch((error)=>{
+        console.log(error)
+      }).finally(()=>{
+        console.log("Promise is settled")
       })
-    // }
-    });
+
+  //  })
+  //   request('GET','https://dummyjson.com/users',(usersData)=>{
+  //     // for(let i=0;i<30;i++){
+  //     console.log(usersData.users[0].id)
+  //     // console.log(data.users[i].id)
+
+  //     // console.log(usersData)
+  //     request('GET',`https://dummyjson.com/posts/user/${usersData.users[0].id}`,(postsData)=>{
+  //       // console.log(postsData)
+  //       console.log(postsData.posts[0].id)
+  //       request('GET',`https://dummyjson.com/comments/post/${postsData.posts[0].id}`,(commentsData)=>{
+  //         console.log(commentsData.comments[0].user.id) 
+  //         request('GET',`https://dummyjson.com/user/${commentsData.comments[0].user.id}`,(userData)=>{
+  //         console.log(userData) 
+  //       })
+      
+  //       })
+  //     })
+  //   // }
+  //   });
   
     
     </script>
