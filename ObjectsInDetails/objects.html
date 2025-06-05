@@ -1,0 +1,61 @@
+<html>
+    <body>
+        <h1> Objects in Details </h1>
+        <script>
+       // General method to make an Object in js called Object literal
+       let obj={
+        key1:"value1",
+        key2:"value2"
+       }
+       obj.key3="value3"
+
+       // cannot make dynamic key in object meaning
+       let keyName="js";
+       obj.keyName="lang";
+
+       //if we wamt a dynamic key means make a key which reside inside a variable then use 
+       // square bracket syntax
+       let keyName2="node"
+       obj[keyName2]="backendLang"
+
+       // js only take string as key in object
+
+    //    obj.1="4555"; // output:Syntax Error:Unexpexted Error
+
+         obj[1]='45'// output:45 as js convert the bracket number from 1 to string "1" internally
+
+         // access the property of an object by bracket notation
+         obj["1"] //output:45
+
+          // Passing object as key in the object
+          const objPass={
+            key:"hello"
+          }
+          let animal="wild animal"
+          const takerObj={}
+           takerObj[objPass]='pass';
+           takerObj[animal]="lion"
+           console.log(takerObj)
+
+           //passing an array as key in Object
+           let country=['CountryName']
+           takerObj[country]="India"
+           console.log(takerObj)
+
+           // changes in the the object as they 
+           // take refrence
+           const objCase={}
+           function getData(){
+            objCase.getAllAccess=function(){
+              console.log("Hacked System")
+            }
+           }
+           getData(objCase) // passing object refrence
+
+           Object.keys(objCase).forEach(k=>{
+            objCase[k]()
+           })
+
+        </script>
+    </body>
+</html>
