@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="asyncAwait.js" ></script>
+</head>
+<body>
+    <h1>Learning Asyn and Await</h1>
+    <script>
+        // const url="https://dummyjson.com/products"
+        // When you declare a function with the async keyword 
+        // (e.g., async function makeRequestt()), you're 
+        // telling JavaScript that this function will likely 
+        // contain asynchronous operations
+    // async function makrequest(){
+
+        // 1 way of doing it
+        // const returnPromise=  await fetch(url)
+        // const data=await returnPromise.json()
+        // console.log(data)
+
+        // 2nd way of doing it
+        // const response=await(await fetch(url)).json();
+        // console.log(response);
+
+        
+
+
+        // using then method in async function ,actually not required as await internally do it 
+        // returnPromise
+        // .then((data)=>{ data.json()})
+        // .then((data)=>console.log(data))
+        // console.log(returnPromise.json())
+        
+        
+        // checking if it will run console.log hi and yes as it run asyncronusally in then method 
+        // console.log("hi")
+        
+        
+        //   console.log("hi")
+        // returning in a empty function body it will resolve with value hello
+        // return "hello"
+
+      // for rejecting in empty body iusing throw and Error constructor which throw and use to try catch
+      // block to catch the errror
+        // throw new Error("this is a Error")
+    // }
+    // makrequest()
+    //  console.log("hi")
+     
+    </script>
+</body>
+</html>
