@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Try and Catch!!</h1>
+    <script>
+     try{
+      console.log(a) //output:ReferenceError: a is not defined at index.htm:12:21-> 12 line 21 charcter
+                     //not defined !=undefined
+     }
+     catch(err){
+        console.dir(err) // tpeof error is object using .dir it shows in object format
+        console.log(err.message)
+         console.log(err.name)
+
+     }
+     finally{
+        console.log('hello world') //  will run even if there is error or no erro
+     }
+
+     console.log(45+6)
+
+// using try catch in async error
+     async function request(){
+try{        
+const reply=await fetch(url1)
+const info=await reply.json()
+return info
+}
+catch(err){
+    console.log(err)
+}
+
+}
+console.log("error is catched so in not block the thread now")
+request().then(console.log) 
+
+    </script>
+</body>
+</html>
