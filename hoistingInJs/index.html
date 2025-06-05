@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting in js</title>
+</head>
+<body>
+    <h1>Learning About Hoisting !!</h1>
+    <script>
+// if take var num=5 in top means before intialization of num=5 and console.log() it shows 
+//undefined because num:undefined, in the global scope before even the execution of the programm
+// but function greet is greet:function greet(){
+// console.log()} is will be intialized in memory area in executioncontext
+//if we remove var num=5 line it s
+// hows "ReferenceError: num is not defined" in console
+//so it conclude undefine is not same as not define 
+// just console.log(greet) in top without calling it ,it give whole function defination as output
+// // 
+//           greet() // print Good Morning Developers in console
+//           console.log(num); // print :undefined
+        //   console.log(greet) 
+
+
+
+    //    var num=5;
+    //     function greet(){
+    //         console.log("Good Morning Developers")
+
+    //     }
+
+        //    greet()
+        //    console.log(num);
+        //   consoel.log(greet)
+
+
+        // Arrow function work differntly
+
+
+        //    myFunc()
+    //      function myFunc2(){
+    //         console.log("save with function defintion")
+    //      }
+    //      myFunc2()
+
+    //    var myFunc= ()=>{
+    //    console.log(" save with undefined as  a variable")
+    //     }
+
+    //     var myfunc3=function(){
+    //         console.log("save myfunc3 with undefined value in global scope ")
+    //     }
+
+    //     myFunc()
+
+        // var, let  and const behavior:
+         //AS let and const made variables does not become property of window Object
+         //  unlike var made variables
+        let blockScope=5; console.log(window.blockScope)// output:undefined
+        const anotherBlockScope=4; console.log(window.anotherBlockScope) // output:undefined
+        var scope=6; console.log(scope) // output:6
+
+        // var, let and const behaviour in function scope
+        //As var vaiable is created inside a function so it become functionScoped
+        //means variables created inside a function using var keyword are not accessible outside
+        // the scope of the function it resides and in source tab in devtool reside in Local Scope
+        // which is same as fuction scope this thing is true for const and let also
+        
+        function checkingScope(){
+           let user1="Aman"
+           const userPassword="212@tyty"
+           var randomValue=45 // console.log(window.randomValue) output:undefined
+        }
+               checkingScope()
+        // console.log('\n',user1,"\n",userPassword)
+
+
+        // var,let,and const behaviour in blockScope such as if statement 
+        // loop statement and in standard{}
+
+    </script>
+</body>
+</html>
