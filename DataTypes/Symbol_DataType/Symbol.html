@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol</title>
+</head>
+<body>
+    <h1>Learning About Symbol Data Types!!</h1>
+    <script>
+    const user1Id=Symbol("12345") // general Syntax for creating Symbol data type
+    const user2Id=Symbol('12345')
+    console.log(user1Id==user2Id) // false, as every Symbol will be unique in the script or even beyond it
+
+    console.log(user1Id,user2Id)
+   const atomicInfo=Symbol("atomicBomb") // creating symbol first then putting in object 
+
+   const nuclearCode=Symbol("Code to operate bomb") //creating another symbol but putting in object other way
+//    as below:
+
+
+    let armedInfo={
+        jet:'40',
+        submarine:34,
+        [atomicInfo]:89,
+
+    }
+    armedInfo["armyPersonal"]=23000000; // bracket string literal way to put key & its value in an object
+    armedInfo.armyPersonal=450000000 // usually way to puy key with value in the object
+     armedInfo[nuclearCode]="002223355" // puttin  in the object
+     armedInfo[Symbol("location to Attack")]="ghikjjj" // using symbol in object another way to do
+
+
+    console.log(armedInfo)
+    console.log(armedInfo[atomicInfo]) // use only bracket notation to show the Symbol dataType key value
+    console.log(armedInfo.atomicInfo) //undefined 
+
+    
+// iteration over the object using for in loop
+
+for(let key in armedInfo){  
+    console.log(key) // output:jet submarine armPersonal
+}                    // as Symbol are not iteriable as properties of an object
+
+
+
+// Object used mostly in javasScript for Data sharing  from the server in the JSON formatt
+// Symbol are cannot be send when then convert from object to json or can say skip the Symbol key:value
+
+//Change Object in Json Formatt
+console.log(JSON.stringify(armedInfo)) //.stringfy method changed object in JSON formatt but still skip
+// Symbol data type property
+
+// Accessing description inside a Symbol method
+const des=Symbol("ESPN")
+console.log(des.description)
+
+</script>
+</body>
+</html>
