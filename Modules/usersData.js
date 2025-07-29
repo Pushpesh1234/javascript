@@ -1,0 +1,94 @@
+const productData=[
+    {mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},
+{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+},{mobiles:"touchscreen",
+     model:"T09",
+     company:"Dfin",
+     price:"40K"
+}
+]
+export default productData
+
+// exporting with with declration
+ export const collection=["Apple",{softwareEnginner:"Full stack Developer,App developer,System Developer"},"56"]
+  // function exporting
+  export function getData(){
+     return productData[0].model
+  }
