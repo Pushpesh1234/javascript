@@ -1,0 +1,49 @@
+Perplexity is repeatedly modifying their user agent and changing IPs and ASNs to hide their crawling activity, in direct conflict with explicit no-crawl preferences expressed by websites. expalin in easy languages
+
+
+
+Think of a website's robots.txt file as a "Do Not Disturb" sign for web crawlers. It's a simple text file that tells crawlers, "Hey, I'd rather you not visit certain parts of my site, or maybe not at all."
+
+Perplexity, in this scenario, is a person who sees the "Do Not Disturb" sign on your hotel room door, but then ignores it. To make things worse, they are also trying to avoid being identified.
+
+Here's what each part of your statement means in simple terms:
+
+"Perplexity is repeatedly modifying their user agent": The user agent is like a name tag or a business card that a web crawler uses to identify itself. It's how a website knows who is visiting. Perplexity is constantly changing this "name tag" so it's harder for websites to block them or even know it's them.
+
+"and changing IPs and ASNs": An IP address is like a physical street address for a computer, and an ASN (Autonomous System Number) is a bigger identifier for a whole network of addresses. Perplexity is changing their "street address" and the network they're coming from. This is like them wearing a disguise and jumping from one Wi-Fi network to another to avoid being tracked.
+
+"to hide their crawling activity": This is the motivation behind their actions. They don't want websites to know who they are or what they're doing.
+
+"in direct conflict with explicit no-crawl preferences expressed by websites": This is the key problem. Websites have put up their "Do Not Disturb" signs (robots.txt files), but Perplexity is intentionally ignoring them and taking steps to hide their identity so they can continue to crawl the site.
+
+In short, Perplexity is being a sneaky, uninvited guest on websites. They're changing their identity and location so they can get around the website's clear instructions not to crawl their content.
+
+
+
+cloudfare tweet this who they are and how they know about it
+
+
+The information you're asking about is based on a recent statement from Cloudflare, a major internet infrastructure company. Here's a breakdown of who they are, how they know, and who Perplexity is in this context:
+
+Who is Cloudflare?
+Cloudflare is an American company that provides a wide range of internet services, including content delivery network (CDN) services, cybersecurity, and DDoS mitigation.
+
+Essentially, they sit between a website and its visitors. A huge portion of the internet's traffic—including millions of websites—passes through Cloudflare's network. This means they have a unique, large-scale view of what's happening on the internet, including bot traffic and crawling activity.
+
+Who is Perplexity?
+Perplexity AI is a company that offers a conversational AI-powered search engine. Unlike a traditional search engine like Google that gives you a list of links, Perplexity aims to provide direct answers, often with sources and citations.
+
+To do this, it needs to crawl the web to find and summarize up-to-date information. They have a known web crawler, but according to Cloudflare, they're not just using that one.
+
+How Does Cloudflare Know?
+This is where Cloudflare's position as a global internet gatekeeper becomes important.
+
+Massive Network Visibility: Because so much of the internet's traffic goes through their servers, Cloudflare can analyze traffic patterns at a massive scale. They can see when millions of requests are coming from a certain IP address or a certain user agent.
+
+Bot Management Tools: Cloudflare offers advanced bot management and security services to its customers. They have tools that are designed to identify and block malicious bots and unwanted crawlers.
+
+Customer Complaints: Cloudflare received complaints from their customers who had explicitly set rules to block Perplexity's official crawler (like in their robots.txt file) but still found that their content was being scraped.
+
+Fingerprinting: Cloudflare's system has the ability to "fingerprint" crawlers. This means they can look at a combination of factors—like the specific patterns of requests, the browser-like behavior, and other network signals—to determine that different IP addresses and user agents are actually the same entity. They were able to connect the "stealth" crawling activity to Perplexity's other known behavior.
+
+In essence, Cloudflare's position gives them a bird's-eye view of internet traffic, allowing them to spot unusual and deceptive patterns that individual website owners would never be able to see on their own. Their bot management tools and customer feedback allowed them to confirm that Perplexity was deliberately trying to get around website instructions.
