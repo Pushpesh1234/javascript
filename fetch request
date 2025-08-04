@@ -1,0 +1,70 @@
+Explain me when i type a new reporistory name in github in network tab it show many fetch request for tying character what is this
+
+
+When you type a new repository name on GitHub, the network requests you see are the browser communicating with GitHub's servers in real-time. This is a common web development technique called "live validation" or "autocomplete."
+
+Here's a breakdown of what's happening:
+
+The "Fetch" Requests
+Every time you type a character, your browser sends a small request to GitHub's server. The server instantly checks if that repository name is:
+
+Available: Is another user already using this name?
+
+Valid: Does the name contain any illegal characters or symbols?
+
+A good match: Does it suggest any similar, available names?
+
+These are typically GET requests sent to an endpoint like /repos/new?repository_name=your_input. The server responds with a small piece of data, often in JSON format, which tells your browser the status of the name you've typed.
+
+Why Does GitHub Do This?
+This process offers a better user experience by giving you immediate feedback. Instead of having to submit the form and then wait for an error page, you know right away if the name you want is taken. This saves you time and prevents frustration.
+
+The practice of sending these requests with every keystroke is called "debouncing" or "throttling" in software development. This means the system waits a very short period (like 250 milliseconds) after you stop typing before sending the request. This prevents the browser from sending dozens of requests for a single word.
+
+
+so the code for the fetch is on client side and the the code which checking the data is server side so which side code will show if is is available or not
+
+
+You've got the core concept right. The process is a two-way street between the client (your browser) and the server.
+
+The code that shows you if the repository name is available or not is on the client side.
+
+Here's the breakdown of how it works:
+
+1. Client Side (Your Browser)
+When you type a character, a piece of code on the webpage (written in JavaScript) detects this event. This code is responsible for:
+
+Sending the request: It constructs and sends a fetch request to the GitHub server with the name you've typed.
+
+Receiving the response: It listens for the server's response.
+
+Updating the UI: Once it receives the response, it reads the data (e.g., {"is_available": true}). Then, it changes the text on the screen to "Repository name is available!" or "Repository name is already taken."
+
+2. Server Side (GitHub's Servers)
+The code on the server is responsible for:
+
+Receiving the request: It gets the request from your browser containing the repository name.
+
+Checking the data: It queries its database to see if a repository with that exact name already exists. It also checks for invalid characters.
+
+Sending the response: It generates a small data packet (like JSON) that contains the result of the check and sends it back to your browser.
+
+
+
+are sure this method is called debouncing
+
+
+You are absolutely right to question that. My apologies for the inaccurate and potentially confusing use of the term.
+
+The correct term for sending a request with every keystroke is not debouncing. Debouncing is actually the technique used to prevent that from happening.
+
+Clarification on Debouncing and Throttling
+When a user types, a "keydown" event is fired for every single character. If a developer isn't careful, this could send a ton of requests to the server, which is inefficient and can slow things down.
+
+The developer will use a technique to limit these requests:
+
+Debouncing is a way of delaying the execution of a function until after a specific amount of time has passed since the last time the event was triggered. In the GitHub example, the code would wait maybe 300 milliseconds after you stop typing before it sends the request. This ensures only one request is sent for a word, not one for every character.
+
+Throttling is similar, but it executes the function at a maximum rate. For example, it might say, "only send a request once every 500 milliseconds, no matter how many times the user types."
+
+So, to be precise, the process you described—seeing a request for every character—is what a developer would want to avoid. The fact that you see a request for every keystroke means the developer likely did not use debouncing or throttling for that specific action. This can be common in cases where a system needs to provide extremely fast feedback, and the server-side checks are very lightweight.
