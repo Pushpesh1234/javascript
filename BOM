@@ -1,0 +1,120 @@
+Sign in to start saving your chats
+Once you're signed in, you can access your recent chats here.
+
+Sign in
+
+Conversation with Gemini
+don't think anyone should trust a company that claims to respect your privacy and block ads, yet enables first-party tracking & ads by default explain this para in easy way
+
+
+
+Imagine a company that tells you, "We're all about your privacy! We'll protect you from ads and companies spying on your Browse." But then, when you use their product, you find out that they're still allowing "first-party tracking."
+
+Here's the easy way to understand what that means:
+
+First-party tracking is when the website you are currently visiting collects information about what you do on their site. They might use this to show you ads for their own products or to remember your preferences.
+
+So, the company is saying, "We'll stop other companies from watching you," but they're still letting the websites you visit watch you and show you their own ads.
+
+It's like a bouncer at a club who says, "No one from outside is getting in," but then lets the club owner's friends in to sell you stuff and watch what you're doing. The company is only blocking the third-party trackers, but they're still enabling the first-party ones. This seems hypocritical to the user, who feels the company is not truly committed to protecting their privacy as they claimed.
+
+
+brave is an adware browser with an ad agency "how" and also expalin blocking the third-party trackers is in easy language
+
+
+That's a really sharp observation. The claim that Brave is an "adware browser with an ad agency" is based on its business model, which can seem contradictory at first glance. Let's break down these two points in a simple way.
+
+"How Brave is an adware browser with an ad agency"
+This statement refers to the Brave Rewards program. Here's how it works:
+
+Brave blocks all the normal ads you'd see on websites by default. This is their core privacy feature.
+
+They have their own ad network. This isn't like a traditional ad agency that tracks you everywhere. Instead, Brave's own ad system serves ads to you as "notifications" on your device or as sponsored images on the new tab page.
+
+You get paid to see these ads. If you opt into the Brave Rewards program, Brave shares the ad revenue with you in the form of a cryptocurrency called Basic Attention Token (BAT). You can then use that BAT to tip creators or exchange it for other currencies.
+
+The key difference is the privacy model. Brave claims that its ad system is "privacy-preserving" because the ads are matched to your interests on your device, without your personal data or Browse history ever leaving your computer. This is a very different approach from most ad agencies that track your activity across the internet and build a profile of you on their servers.
+
+So, while Brave does have a business that sells and displays ads (making them an "ad agency" in a way), they are doing it with a very specific, and arguably more private, method. Whether you consider this an "adware browser" is a matter of perspective—it's a browser that shows ads, but only if you opt in and in a way that is designed to protect your privacy.
+
+Explaining "Blocking Third-Party Trackers" in Easy Language
+Think of Browse the internet like walking through a shopping mall.
+
+You are the shopper. You're walking around, looking at different stores (websites).
+
+The store you are in is the "first party." Let's say you're in a clothing store. That store knows what you're looking at inside their store. They might see that you looked at a lot of blue shirts and show you a sign for a sale on blue shirts. This is "first-party tracking."
+
+"Third parties" are the people secretly following you from store to store. This is like a private detective hired by a company that sells shoes. This detective follows you from the clothing store, to the electronics store, to the food court, and writes down everything you look at. The shoe company then knows you were in a clothing store, an electronics store, and a food court, so they can send you a coupon for shoes that would match the clothes you were looking at. This is third-party tracking.
+
+Blocking third-party trackers is like having a security guard in the mall who sees the private detective and tells them to leave. The detective can no longer follow you from store to store and report your activity to the shoe company.
+
+Your experience in the clothing store hasn't changed—the store itself still knows what you looked at while you were there. But the people secretly following you and building a profile of your overall shopping habits are gone. This is what Brave (and other browsers with similar features) does. It stops those invisible detectives (third-party trackers) from following you and collecting your data across the internet.
+
+
+is it possible to disable first party ad in brave and what are ad new tab background
+
+
+Yes, it's possible to disable the first-party ads in Brave. Brave's ad system is designed to be user-controlled, so you have the choice to participate or not.
+
+
+How to Disable First-Party Ads in Brave
+The ads that are part of the Brave Rewards program are what you're referring to as "first-party ads." These are the ones that give you BAT cryptocurrency. To disable them:
+
+Open Brave's settings. You can do this by clicking the three-line menu icon in the top-right corner of the browser and selecting "Settings."
+
+Go to "Brave Rewards." This is where you manage the program.
+
+Turn off Brave Rewards. There should be a toggle or a button to disable the entire program. By doing this, you will no longer receive the notification ads or see the sponsored images on the new tab page.
+
+You can also customize your ad settings within the Brave Rewards section to only see certain types of ads or to set a limit on how many you see per hour.
+
+What are "New Tab Background Ads"?
+These are one of the types of "first-party" ads that are part of the Brave Rewards program. When you open a new tab in Brave, you are often greeted with a beautiful, high-quality photograph. When you have Brave Rewards enabled, some of these images are sponsored by advertisers.
+
+How they work: Instead of a random landscape photo, you might see a full-page image that promotes a brand or a product. These are also known as "Sponsored Images."
+
+
+Privacy-focused: Brave's system for these ads is designed so that the ad is displayed on your device and your Browse data is not sent to the advertiser. Brave only provides advertisers with an aggregate, anonymous report of how many users saw and clicked on their ad.
+
+
+Opt-out: Just like the other Brave Rewards ads, you can easily turn these off. On the new tab page, there is a "Customize" icon (often in the bottom-right corner). Clicking this allows you to toggle off "Sponsored Images" and choose other background options, like your own photos, Brave's own backgrounds, or a solid color.
+
+
+
+
+Sources
+
+
+but tou said first party ad are which website record now you are saying different thing
+
+
+You've hit on a crucial distinction that can be a bit confusing. My apologies if my previous explanation caused that confusion. Let's clarify the difference between "first-party tracking" and Brave's own "first-party ads" and how they relate.
+
+You are absolutely right that in my first explanation, I defined first-party tracking as a website collecting data about your activity on its own site. This is the standard definition of first-party tracking in the context of web analytics and advertising.
+
+The confusion arises because Brave's ad system is often described as a "first-party" ad system, but it's fundamentally different from the "first-party tracking" you were originally asking about.
+
+Let's break down the two concepts:
+
+1. First-Party Tracking (The Website's Activity)
+Who is doing the tracking? The website you are currently visiting.
+
+What are they tracking? Your actions and behavior on their site only. For example, they track which pages you visit, what you click on, and what you put in your shopping cart.
+
+Why do they do it? To understand their audience, improve their website, and often, to serve you ads for their own products or services.
+
+Is Brave blocking this? Brave's "Shields" block a lot of this by default, but it's a more complex issue. It's often impossible to fully block all first-party tracking without "breaking" the website (e.g., you couldn't log in, and your shopping cart wouldn't remember your items). Brave's aggressive ad-blocking setting can be enabled to block more of these, but it's not the default because of this potential for breaking websites.
+
+2. Brave's First-Party Ads (The Browser's Activity)
+Who is doing the tracking? No one, according to Brave.
+
+What are they tracking? Brave's ad system is designed to be on-device and private. Brave downloads a catalog of ads, and then its own algorithm on your computer determines which ads to show you based on your local Browse history. This data never leaves your computer, and no profile is built of you on a remote server.
+
+Why do they do it? This is Brave's business model. They sell ad space, and in exchange for your attention, they share a portion of the revenue with you in the form of BAT.
+
+Is this a "first-party ad"? Yes, in the sense that Brave itself is the "first party" serving you the ad, not a separate, third-party ad network. The key is that the ads are served by the browser, not the website you are visiting. The Brave Rewards ads (notifications and new tab backgrounds) are distinct from the ads that are embedded on a webpage itself.
+
+The Key Difference
+The core distinction is that Brave's ad system does not track you and your data never leaves your device. This is the opposite of the traditional "first-party tracking" that a website does, which typically collects your data and sends it to their servers for analysis.
+
+So, while Brave does have its own ad network, it's designed to function in a completely different way from the traditional tracking and ad serving that happens across the internet. It's not a website "spying" on you; it's a browser offering you a privacy-preserving way to view ads in exchange for compensation.
